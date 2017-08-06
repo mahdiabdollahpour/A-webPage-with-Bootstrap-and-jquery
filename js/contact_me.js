@@ -4,10 +4,12 @@ $(document).ready(function(){
         contact.find("textarea").each(function(ev)
                                       {
             
-            console.log("found");
+           
             if($(this).val()=="") { 
                 $("textarea + label").text("Please enter a message");
-                console.log("im in");
+               
+            }else{
+                $("textarea + label").text("");
             }
         });
 
@@ -15,6 +17,8 @@ $(document).ready(function(){
                                                      {
             if($(this).val()=="") { 
                 $("input[placeholder=Name] + label").text("Please enter your name");
+            }else{
+                $("input[placeholder=Name] + label").text("");
             }
         });
 
@@ -22,6 +26,8 @@ $(document).ready(function(){
                                                                 {
             if($(this).val()=="") { 
                 $("input[placeholder='Email Address'] + label").text("Please enter your Email Address");
+            }else{
+                $("input[placeholder='Email Address'] + label").text("");
             }
         });
 
@@ -29,6 +35,8 @@ $(document).ready(function(){
                                                                {
             if($(this).val()=="") { 
                  $("input[placeholder='Phone Number'] + label").text("Please enter your Phone Number");
+            }else{
+                $("input[placeholder='Phone Number'] + label").text("");
             }
         });
 
