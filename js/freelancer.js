@@ -17,6 +17,7 @@ var getClosrBtn = function(popup){
         $("#myPopup").empty();
         setHandlers();
 
+
     });
 
     return closebtn;
@@ -25,7 +26,7 @@ var getClosrBtn = function(popup){
 
 setHandlers = function(){
 
-    $(".popup").on("click",(function(event) {
+    var clickHandler = function(event) {
         var popup = document.getElementById("myPopup");
         // var popup = event.currentTarget;
         var toShow;
@@ -55,29 +56,62 @@ setHandlers = function(){
                 div.append(data);
                 $(popup).append(div);
                 closeB.html("<i class='fa fa-times' aria-hidden='true'></i> Close");
-                
+
                 $(popup).append(closeB);
             }
 
         });
         toggleFunc(popup,toShow);
-        $(".popup").off();
+        ///////
+       $(".popup").unbind("click");
+        ////////
         console.log("toggled");
-    }));
+    };
+
+
+    $(".popup").on("click",clickHandler);
 
 }
 
+var setHoverEvent = function (){
+
+    $(".port-img-con").on("mouseenter",function(){
+        $(this).css("background-color","#66be66");
+        $(this).find("img").css("opacity","0.2");
+        $(this).find(".mag").css("visibility","visible");
+
+        console.log("hided");
+
+
+    }); 
+    var showFunc= function(){
+        $(this).css("background-color","white");
+        $(this).find("img").css("opacity","1");
+        $(this).find(".mag").css("visibility","hidden");
+        console.log("showing")}
+
+
+    $(".port-img-con").on("mouseleave",showFunc);
+    //    $(".port-img-con").mouseout(showFunc);
+
+
+
+
+
+
+}
 
 
 $(document).ready(function(){
 
 
     setHandlers();
-
-
-
+    setHoverEvent();
 
 
 
 
 });
+
+
+
