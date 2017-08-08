@@ -47,10 +47,11 @@ body{
 
 }
 .mag{
-    /*    visibility: hidden;*/
+    color: white;
+    visibility: hidden;
     position: absolute;
-    top:45%;
-    left: 45%;
+    top:40%;
+    left: 40%;
 
 
 }
