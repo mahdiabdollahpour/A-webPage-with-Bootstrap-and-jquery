@@ -1,4 +1,5 @@
 
+
 var toggleFunc = function(popup,toShow){
     popup.classList.toggle("show");
     if(toShow){
@@ -63,7 +64,7 @@ setHandlers = function(){
         });
         toggleFunc(popup,toShow);
         ///////
-       $(".popup").unbind("click");
+        $(".popup").unbind("click");
         ////////
         console.log("toggled");
     };

@@ -3,6 +3,15 @@ body{
     text-align: center;
 
 }
+.line{
+    background-color: white;
+    width: 50px;
+    height: 5px;
+    display: inline;
+}
+nav{
+     background-color: #2c3e50;
+}
 #navbar{
     background-color: #2c3e50;
     color: white;
@@ -37,7 +46,7 @@ body{
 .port-img{
     width: 100%;
     height: auto;
-    top: 0;
+    top: 0; 
     left: 0;
 }
 .port-img-con{
@@ -203,4 +212,17 @@ button{
     from {opacity: 0;}
     to {opacity:1 
     }
+}
+
+
+
+
+
+@media only screen and (min-width: 500px) {
+
+.mycol{
+    width: 100%;
+    }   
+
+
 }
