@@ -13,14 +13,17 @@ var getClosrBtn = function(popup){
         class:"btn",
         id:"close-btn",  
     });
-    closebtn.on("click",function(){
+    function closeFunc() {
         toggleFunc(popup,false);
-        $("#myPopup").empty();
+        //        $("#myPopup").empty();
+        $('img',popup).remove();
+        $('#close-btn',popup).remove();
+        $('#text-div',popup).remove();
         setHandlers();
-
-
-    });
-
+    }
+    closebtn.on("click",closeFunc);
+    $("#close-icon").off();
+    $("#close-icon").on("click",closeFunc);
     return closebtn;
 }
 
@@ -51,7 +54,7 @@ setHandlers = function(){
             success : function (data) {
 
                 var div = jQuery('<div/>',{
-
+                    id:"text-div",
                 });
                 var closeB = getClosrBtn(popup);
                 div.append(data);
