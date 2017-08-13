@@ -80,7 +80,7 @@ setHandlers = function(){
 var setHoverEvent = function (){
 
     $(".port-img-con").on("mouseenter",function(){
-        $(this).css("background-color","#66be66");
+        $(this).css("background-color","#18bc9c");
         $(this).find("img").css("opacity","0.2");
         $(this).find(".mag").css("visibility","visible");
 
@@ -111,9 +111,73 @@ $(document).ready(function(){
 
     setHandlers();
     setHoverEvent();
+    $("#navbarSupportedContent").on("show.bs.collapse",function(){
+        $(".navbar-toggler-icon").css("background-color","#18bc9c");
+
+    });
+    $("#navbarSupportedContent").on("hidden.bs.collapse",function(){
+
+
+        $(".navbar-toggler-icon").css("background-color","#2c3e50");
+    });
+
+    //    $(".nav-item").mouseenter(function(event){
+    //
+    //        console.log("im in");
+    //        if($("#menu").is(":visible")){
+    //
+    //            console.log("back : green");
+    //            $(event.currentTarget).css("background-color","#18bc9c");
+    //            $(event.currentTarget).find(".nav-link").css("color","white");
+    //
+    //
+    //        }else{
+    //            console.log("back : black");
+    //            $(event.currentTarget).css("background-color","#2c3e50");
+    //            $(event.currentTarget).find(".nav-link").css("color","#18bc9c");
+    //        }
+    //
+    //
+    //
+    //    });
+    //    $(".nav-item").mouseleave(function(event){
+    //
+    //        console.log("reseting");
+    //        $(event.currentTarget).css("background-color","#2c3e50");
+    //        $(event.currentTarget).find(".nav-link").css("color","white");
+    //
+    //    });
+    //
 
 
 
+    var sections = $('.sections');
+    var nav = $('nav');
+    var nav_height = nav.outerHeight();
+
+    $(window).on('scroll', function () {
+        var cur_pos = $(this).scrollTop();
+
+        sections.each(function() {
+            var top = $(this).offset().top - nav_height;
+            var bottom = top + $(this).outerHeight();
+
+            if (cur_pos >= top && cur_pos <= bottom) {
+
+
+                nav.find('.nav-item').removeClass('active');
+                sections.removeClass('actived');
+
+                $(this).addClass('actived');
+                nav.find('a[href="#'+$(this).attr('id')+'"]').parent().addClass('active');
+
+            }else{
+
+                $(this).removeClass('actived');
+                nav.find('a[href="#'+$(this).attr('id')+'"]').parent().removeClass('active');
+            }
+        });
+    });
 
 });
 

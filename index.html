@@ -4,11 +4,7 @@
 
     <head>
 
-        <!--
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
--->
+
         <link href="styles/bootstrap-grid.min.css" type="text/css" rel="stylesheet">
         <link href="styles/bootstrap-reboot.min.css" type="text/css" rel="stylesheet">
         <link href="styles/bootstrap.min.css" type="text/css" rel="stylesheet">
@@ -16,18 +12,11 @@
         <script src="js/bootstrap.min.js"></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+
 
         <link href="styles/freelancer.css" type="text/css" rel="stylesheet">
 
-        <!-- Latest compiled and minified CSS -->
-        <!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
 
-        <!-- Optional theme -->
-        <!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
-
-        <!-- Latest compiled and minified JavaScript -->
-        <!--        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
 
         <script src="js/contact_me.js"></script>
         <script src="js/freelancer.js"></script>
@@ -43,7 +32,10 @@
 
             <nav class="navbar fixed-top navbar-toggleable-md" >
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"><span id="menu">MENU</span>
+
+                        <i class="fa fa-bars fa-xs" aria-hidden="true"></i>
+                    </span>
                 </button>
                 <a class="navbar-brand" href="#start">START BOOTSTRAP</a>
 
@@ -100,7 +92,7 @@
         </div>
 
 
-        <div class="container-fluid" id="portfolio">
+        <div class="container-fluid sections" id="portfolio">
 
 
 
@@ -110,10 +102,10 @@
             </div>
             <div class="container">
                 <div class="popuptext" id="myPopup">
-               <h2>PROJECT TITLE</h2>
-            <div class="star-and-line" style="color: black">
-                <span class="line">-------------</span><i class="fa fa-star fa-lg" aria-hidden="true" ></i><span class="line">-------------</span>
-            </div>
+                    <h2>PROJECT TITLE</h2>
+                    <div class="star-and-line" style="color: black">
+                        <span class="line">-------------</span><i class="fa fa-star fa-lg" aria-hidden="true" ></i><span class="line">-------------</span>
+                    </div>
                     <i class="fa fa-times fa-2x"  aria-hidden="true" id="close-icon"></i>
                 </div>
 
@@ -181,7 +173,7 @@
 
         </div>
 
-        <div class="container-fluid" id="about">
+        <div class="container-fluid sections" id="about">
             <h2><b>ABOUT</b></h2>
             <div class="star-and-line">
                 <span class="line">-------------</span><i class="fa fa-star fa-lg" aria-hidden="true"></i><span class="line">-------------</span>
@@ -214,7 +206,7 @@
         </div>
 
 
-        <div class="container-fluid" id="contact">
+        <div class="container-fluid sections" id="contact">
 
             <h2><b>CONTACT ME</b></h2>
 
@@ -242,17 +234,25 @@
             <div class="col-sm-12 col-md-4">
 
                 <h2><b>LOCATION</b></h2>
-                Illum arbitrantur litteris fore vidisse hic do labore summis et quibusdam, an 
-                enim tamen in eiusmod iis multos appellat quo praetermissum. In duis veniam quae 
-
+                3481 Merlos Place<br>
+                Beverly Hills,CA 90210
             </div>
             <div class="col-sm-12 col-md-4">
                 <h2><b>AROUND THE WEB</b></h2>
-
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-                <i class="fa fa-google-plus" aria-hidden="true"></i>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <div class="links">
+                    <div class="circle">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </div>
+                    <div class="circle">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </div>
+                    <div class="circle">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </div>
+                    <div class="circle">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-12 col-md-4">
                 <h2><b>ABOUT FREELANCER</b></h2>
@@ -263,7 +263,7 @@
 
         </div>
         <div class="container-fluid" id="copy-right">
-            Copyright your website
+            Copyright <i class="fa fa-copyright" aria-hidden="true"></i> Your Website 2016
 
 
         </div>

@@ -14,34 +14,77 @@ body{
     margin: auto;
     text-align: center;
 }
+.navbar-toggler-icon{
+    color: white;
+    border: 1px solid white;
+    width: 80px;
+
+    border-radius: 5px;
+
+}
+/*
+.navbar-toggler-icon:active{
+background-color: #18bc9c;
+}
+*/
+
+#menu{
+
+    position: absolute;
+    top:15px;
+    left:20px;
+    font-size: 10px;
+}
+
+.fa-bars{
+    display: inline;
+    margin-top: 5px;
+    float: right;
+    margin-right:10px;
+}
+
 nav{
     background-color: #2c3e50;
 }
 #navbar{
     background-color: #2c3e50;
-
-
 }
 
 
+/*
 .nav-item  :hover {
-    background-color: #03c684;
-    color: white;
+background-color: #18bc9c;
+color: white;
 
 }
+*/
 .nav-item{
     text-align: left;
 
+}
+
+.active {
+    background-color: #18bc9c;    
+}
+.nav-item :hover{
+    color: #18bc9c;
+}
+.active :hover{
+    color: white;
 }
 .nav-link , .navbar-brand{
     color: white;
     font-weight: bold;
 }
+.navbar-brand{
+    float: left;
+    width: 200px;
+}
 
 #start{
-    background-color: #03c684;
+
+    background-color: #18bc9c;
     margin: auto;
-    /*    margin-top: -20px;*/
     color: white;   
     padding-bottom: 160px;
     padding-top: 100px;
@@ -52,11 +95,7 @@ nav{
     /*    background-color: white;*/
 
 }
-.background{
-    border: 2px solid blue;
 
-
-}
 .port-img{
     width: 100%;
     height: auto;
@@ -98,12 +137,18 @@ nav{
     padding-top: 200px;
     padding-bottom: 200px;
     color: white;
-    background-color: #03c684;
+    background-color: #18bc9c;
 }
 #about-text{
-
+    text-align: left; 
     width: 70%;
     margin: auto;
+}
+@media only screen and (max-width: 630px) {
+    #about-text{
+        margin-left: 5px;
+        width: 100%;
+    }
 }
 #contact{
     padding-top: 100px;
@@ -130,7 +175,7 @@ input,textarea{
     clear: left;
     float: left;
     color: white;
-    background-color: #00ed9d;
+    background-color: #18bc9c;
 }
 button{
 
@@ -143,12 +188,22 @@ button{
     color: white;
 }
 #footer i{
-    padding: 10px;
-    margin: 20px;
+    margin-top: 30%;
+
+
+}
+.circle{
+    margin:20px;
+    float: left;
     border: 2px solid white;
+    width: 40px;
+    height: 40px;
     border-radius:50%;
 
-
+}
+.links{
+    width: 330px;
+    margin: auto;
 }
 #copy-right{
     background-color: #10171d;
@@ -156,6 +211,9 @@ button{
     padding-top: 30px;
     padding-bottom: 30px;
 
+}
+input,textarea{
+    outline: none;
 }
 #close-btn{
     margin: auto;
@@ -168,24 +226,11 @@ button{
 /* Popup container */
 .popup {
     padding: 5px;
-    /*
-    margin-left: 5px;
-    margin-right: 5px;
-    */
+
     cursor: pointer;
 }
 .green-content{
-    color: #33bf0a;
-}
-.green-part{
-    background-color: green;
-    top: 0;
-    left: 0;
-    width: 75%;
-    height: 100%;
-    opacity: 0.3;
-    z-index: 1;
-
+    color: #18bc9c;
 }
 
 /* The actual popup (appears on top) */
@@ -235,15 +280,3 @@ button{
     }
 }
 
-
-
-
-
-@media only screen and (min-width: 500px) {
-
-    .mycol{
-        width: 100%;
-    }   
-
-
-}
